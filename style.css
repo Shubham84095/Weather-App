@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    color: white;
+}
+
+.gradient-text {
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff 33%, #ffffff 66%, rgb(255, 255, 255) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.gradient-text2 {
+    /* font-size: 48px; */
+    font-weight: bold;
+    background: linear-gradient(90deg, #f0e68c 0%, #0cf0ec 33%, #def910 66%, #0d9af1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.container{
+    position: relative;
+    width: 400px;
+    background: rgba(255, 255, 255, .2);
+    height: 100px;
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    transition: height .5s ease;
+}
+
+.searchBox{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.searchBox input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 5px;
+    background: transparent;
+}
+
+.searchBox input::placeholder{
+    color: white;
+    text-transform: capitalize;
+}
+
+.searchBox>i{
+    font-size: 25px;
+    color: black;
+    margin-right: 10px;
+}
+
+.searchBox button{
+    background-color: #000000;
+    color: #fff;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 70%;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBox button:hover{
+    background-color: #333;
+}
+
+.weatherBox{
+    position: relative;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.weatherBox img{
+    width: 60%;
+}
+
+.weatherBox .temperature{
+    font-size: 60px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.weatherBox .temperature span{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+.weatherBox .description{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+
+.weatherDetails{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.humidity{
+    display: flex;
+    align-items: center;
+    transform: translateY(-100%);
+}
+
+.humidity i{
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+.wind{
+    display: flex;
+    align-items: center;
+    transform: translateY(-100%);
+}
+
+.wind i{
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+.weatherDetails.active .humidity,
+.weatherDetails.active .wind{
+    transform: translateY(0);
+    transition: transform .5s ease;
+    transition-delay: .5s;
+}
+
+.weatherBox,
+.weatherDetails,
+.notFoundBox{
+    visibility: hidden;
+    overflow: hidden;
+}
+.weatherBox.active,
+.weatherDetails.active,
+.notFoundBox.active{
+    visibility: visible;
+}
+
+.weatherBox .box,
+.notFoundBox .box{
+    transform: translateY(-100%);
+}
+
+.weatherBox.active .box,
+.notFoundBox.active .box{
+    transform: translateY(0);
+    transition: transform .5s ease;
+    transition-delay: .5s;
+}
+
+.notFoundBox{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   text-align: center;
+   margin-top: 120px;
+}
+
+.notFoundBox img{
+    width: 65%;
+}
+
+.notFoundBox p{
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 20px;
+}
