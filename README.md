@@ -1,6 +1,8 @@
 # Weather App
 
-[![Netlify Status](https://app.netlify.com/sites/weatherappauthshubham/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://app.netlify.com/sites/weatherappauthshubham/deploys)
+
+## Description
 
 ## Description
 
