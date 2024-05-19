@@ -1,8 +1,8 @@
 # Weather App
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://app.netlify.com/sites/weatherappauthshubham/deploys)
+## Project Link
 
-## Description
+Check out the live project [here](https://weatherappauthshubham.netlify.app/).
 
 ## Description
 
@@ -42,4 +42,4 @@ The Weather App provides real-time weather information for any location worldwid
 For any questions or suggestions, feel free to contact me at:
 
 - **Email:** shubham84095@gmail.com
-- **GitHub:** [your-username](https://github.com/Shubham84095)
+- **GitHub:** [shubham84095](https://github.com/shubham84095)
